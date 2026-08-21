@@ -25,4 +25,9 @@
     sudo apt-get update
     sudo apt-get install helm
 
-    
+# Create Helm chart
+    helm create myapp
+
+# Validate Helm chart (From the directory containing Chart.yaml)
+    helm lint .
+
