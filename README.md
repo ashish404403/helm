@@ -26,8 +26,33 @@
     sudo apt-get install helm
 
 # Create Helm chart
-    helm create myapp
+    helm create playground
 
-# Validate Helm chart (From the directory containing Chart.yaml)
-    helm lint .
+# Validate Helm chart
+    helm lint playground
+
+# dry-run & debug
+    helm install myplayground --debug --dry-run playground
+    
+# helm install
+    helm install myplayground playground
+
+# Common variations:
+
+# Install into a specific namespace, creating it if missing
+    helm install myplayground playground -n myapp --create-namespace
+
+# Override values at install time
+    helm install myplayground playground --set replicaCount=3
+
+# Use a custom values file
+    helm install myplayground playground -f custom-values.yaml
+
+# helm list
+    helm list
+
+# helm upgrade
+    helm upgrade myplayground playground
+
+
 
