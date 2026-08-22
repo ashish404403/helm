@@ -33,7 +33,10 @@
 
 # dry-run & debug
     helm install myplayground --debug --dry-run playground
-    
+
+#
+#
+
 # helm install
     helm install myplayground playground
 
@@ -47,12 +50,52 @@
 
 # Use a custom values file
     helm install myplayground playground -f custom-values.yaml
+#
+#
 
 # helm list
     helm list
 
+#
+#
+
 # helm upgrade
     helm upgrade myplayground playground
+    
+# Combine with --install to make it idempotent (install if not present, upgrade if it is):
+    helm upgrade --install myplayground playground
 
+#
+    helm upgrade myplayground playground --set image.tag=v2.0.0
+    helm upgrade myplayground playground -f values-prod.yaml
+    helm upgrade myplayground playground --atomic   # auto-rollback on failure
 
+#
+#
+
+# helm rollback
+    helm rollback myplayground 1
+
+#
+    helm history myplayground
+
+# helm uninstall
+    helm uninstall myplayground
+
+# Keep history for potential rollback by adding --keep-history (release stays visible in helm list -a but resources are removed):
+    helm uninstall myplayground --keep-history
+
+# helm repo
+    helm repo list
+
+#
+    helm repo add bitnami https://charts.bitnami.com/bitnami   # add a repo
+    helm repo update                                              # refresh cached chart index
+    helm repo remove bitnami                                      # remove a repo
+
+# helm search hub
+    helm search hub postgresql
+
+# search only YOUR added local repos (needs `helm repo update` first)
+    helm search repo postgresql
 
