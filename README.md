@@ -90,7 +90,7 @@
     helm uninstall myplayground --dry-run
 
 # helm repo
-    helm repo list
+    helm repo list -A
 
 #
     helm repo add bitnami https://charts.bitnami.com/bitnami   # add a repo
@@ -102,4 +102,25 @@
 
 # search only YOUR added local repos (needs `helm repo update` first)
     helm search repo postgresql
+
+
+
+#
+#
+#
+#
+
+#
+    mkdir -p docs
+    helm package playground --destination docs
+#
+    helm repo index docs --url https://ashish404403.github.io/helm
+#
+    helm repo add ashish404403 https://ashish404403.github.io/helm
+    helm repo update
+    helm search repo playground
+
+#
+    helm install myplayground ashish404403/playground --namespace playground --create-namespace
+
 
