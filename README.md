@@ -75,6 +75,8 @@
 
 # helm rollback
     helm rollback myplayground 1
+# wait for resources to become ready
+    helm rollback myplayground 1 --wait
 
 #
     helm history myplayground
