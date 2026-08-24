@@ -123,5 +123,7 @@
     helm search hub playground --max-col-width 0
 #
     helm install myplayground ashish404403/playground --namespace playground --create-namespace
+#
+    helm template myplayground playground
 
 
