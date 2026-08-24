@@ -119,7 +119,8 @@
     helm repo add ashish404403 https://ashish404403.github.io/helm
     helm repo update
     helm search repo playground
-
+#
+    helm search hub playground --max-col-width 0
 #
     helm install myplayground ashish404403/playground --namespace playground --create-namespace
 
