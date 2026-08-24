@@ -86,6 +86,8 @@
 
 # Keep history for potential rollback by adding --keep-history (release stays visible in helm list -a but resources are removed):
     helm uninstall myplayground --keep-history
+#
+    helm uninstall myplayground --dry-run
 
 # helm repo
     helm repo list
