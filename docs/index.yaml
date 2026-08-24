@@ -3,12 +3,12 @@ entries:
   playground:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2026-08-24T19:45:35.042187414Z"
+    created: "2026-08-24T21:09:03.57159909Z"
     description: A Helm chart for Kubernetes
-    digest: 88ba1d359cd534afc241b121b63fd9901c4bc5ec5dc73689e6db297baf71b997
+    digest: abf294cb3eeb47fb2690208c9d2705de67d57f43ad6e84a82ccfa15ac0d75215
     name: playground
     type: application
     urls:
     - https://ashish404403.github.io/helm/playground-0.1.0.tgz
     version: 0.1.0
-generated: "2026-08-24T19:45:35.040482566Z"
+generated: "2026-08-24T21:09:03.57060199Z"
